@@ -1,5 +1,6 @@
 package controllers;
 
+import entities.Employe;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,6 +15,7 @@ public class Exercice1Controller {
 
     @RequestMapping("")
     public String hello(Model model) {
-        return("hello");
+        model.addAttribute("employe", facade.findEmployeById(1));
+        return "hello";
     }
 }

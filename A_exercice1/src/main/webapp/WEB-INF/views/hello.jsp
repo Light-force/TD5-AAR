@@ -8,8 +8,27 @@
 </head>
 <body>
 
-L'application a l'air de se lancer...
+<table>
+    <tr>
+        <td>ID:</td>
+        <td>${employe.idEmp}</td>
+    </tr>
+    <tr>
+        <td>Nom:</td>
+        <td>${employe.nom}</td>
+    </tr>
+</table>
 
+<h2>Projets associés</h2>
+<ul>
+    <c:forEach var="projet" items="${employe.projetsEnCours}">
+        <li>${projet.nomProjet}</li>
+    </c:forEach>
+</ul>
 
+<h2>Machines associées</h2>
+<p>${employe.machine.modele}</p>
+<h2>Service associés</h2>
+<p>${employe.service.nomService}</p>
 </body>
 </html>

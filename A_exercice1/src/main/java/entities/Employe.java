@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Set;
 
 @Entity
+@NamedEntityGraph(name = "graphe.Employe.detail", attributeNodes = {@NamedAttributeNode("machine"), @NamedAttributeNode("projetsEnCours"), @NamedAttributeNode("telephones"), @NamedAttributeNode("service"), @NamedAttributeNode("adresse")})
 @Table(name = "EMPLOYES")
 public class Employe {
     @Id @GeneratedValue
