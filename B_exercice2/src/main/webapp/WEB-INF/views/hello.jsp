@@ -8,8 +8,11 @@
 </head>
 <body>
 
-L'application a l'air de se lancer...
+<h1>Create Employe and Client</h1>
 
+<form method="post">
+    <input type="submit" value="Create">
+</form>
 
 </body>
 </html>

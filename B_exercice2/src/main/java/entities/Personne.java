@@ -2,7 +2,7 @@ package entities;
 
 import javax.persistence.*;
 
-@Entity
+@MappedSuperclass
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Personne {
     @Id @GeneratedValue

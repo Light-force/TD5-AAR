@@ -1,9 +1,12 @@
 package entities;
 
 import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import java.time.LocalDate;
 
 @Entity
+@Inheritance(strategy= InheritanceType.JOINED)
 public class Client extends Personne {
     private String numInsee;
     private LocalDate dateEmbauche;

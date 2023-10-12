@@ -30,5 +30,6 @@ public class WebServletConfiguration implements WebApplicationInitializer{
                 .addServlet("h2-console", new WebServlet());
         h2servlet.setLoadOnStartup(2);
         h2servlet.addMapping("/console/*");
+
     }
 }
